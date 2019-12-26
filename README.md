@@ -1,4 +1,4 @@
-# 3D_digitizer2
+# 3D_digitizer
 This version will be using the Omron E6B2-CWZ6C 1024P/R Incremental Rotary Encoder
 http://www.ia.omron.com/product/item/2453/
 
