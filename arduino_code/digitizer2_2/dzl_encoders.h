@@ -1,12 +1,14 @@
-//*****************************************************
-//  Quadrature encoder library V1.0
-//  (F) Dzl 2018
-//  Drives encoders on ATMEGA328 based and compatible
-//*****************************************************
-
-#ifndef __ENCODERS //This checks to see if this is not currently defined
-#define __ENCODERS
 /*
+Quadrature encoder library V1.0
+(F) Dzl 2018
+Drives encoders on ATMEGA328 based and compatible
+*/
+
+#ifndef __ENCODERS 
+#define __ENCODERS
+
+/*
+#ifndef checks to see if this is not currently defined
 #define is to give a name to a constant value 
 
 Syntax
@@ -25,6 +27,19 @@ value: the value to assign to the macro.
 #define DEFAULT_RATE 10000         //[Hz]
 
 volatile unsigned int timerIncrement = (16000000L / DEFAULT_RATE);
+
+/*
+unsigned ints (unsigned integers) are the same as ints
+that they store a 2 byte value
+they only store positive values, range of 0 to 65,535 ((2^16) - 1).
+
+Syntax
+unsigned int var = val;
+
+Parameters
+var: variable name.
+val: the value you assign to that variable.
+*/
 
 //*****************************************************
 //  Some macros
