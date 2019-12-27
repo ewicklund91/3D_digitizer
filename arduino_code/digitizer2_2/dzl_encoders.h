@@ -29,6 +29,10 @@ value: the value to assign to the macro.
 volatile unsigned int timerIncrement = (16000000L / DEFAULT_RATE);
 
 /*
+Volatile indicates that value may change between different accesses, even if it does not appear to be modified. 
+Primarily in hardware access (memory-mapped I/O), where reading from or writing to memory is used to communicate with peripheral devices,
+and in threading, where a different thread may have modified a value.
+
 unsigned ints (unsigned integers) are the same as ints
 that they store a 2 byte value
 they only store positive values, range of 0 to 65,535 ((2^16) - 1).
