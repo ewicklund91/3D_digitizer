@@ -53,6 +53,37 @@ val: the value you assign to that variable.
 #define CHK(x,y) (x & (1<<y))          // |
 #define TOG(x,y) (x^=(1<<y))           //-+
 
+/*
+Description
+^= is often used with a variable and a constant to toggle (invert) particular bits in a variable.
+
+Syntax
+x ^= y; // equivalent to x = x ^ y;
+
+Parameters
+x: variable. Allowed data types: char, int, long.
+y: variable or constant. Allowed data types: char, int, long.
+
+Description
+&= is often used with a variable and a constant to force particular bits in a variable to the LOW state (to 0). 
+
+Syntax
+x &= y; // equivalent to x = x & y;
+
+Parameters
+x: variable. Allowed data types: char, int, long.
+y: variable or constant. Allowed data types: char, int, long.
+
+Description
+|= is often used with a variable and a constant to "set" (set to 1) particular bits in a variable.
+
+Syntax
+x |= y; // equivalent to x = x | y;
+
+Parameters
+x: variable. Allowed data types: char, int, long.
+y: variable or constant. Allowed data types: char, int, long.
+*/
 //*****************************************************
 // Encoder state machine:
 // encoder offset = encref [old state][encoder input]
