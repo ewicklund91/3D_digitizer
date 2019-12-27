@@ -1,9 +1,3 @@
-/*
-Quadrature encoder library V1.0
-(F) Dzl 2018
-Drives encoders on ATMEGA328 based and compatible
-*/
-
 #ifndef __ENCODERS 
 #define __ENCODERS
 
@@ -19,9 +13,7 @@ constantName: the name of the macro to define.
 value: the value to assign to the macro.
 */
 
-//*****************************************************
-//  Settings
-//*****************************************************
+//Settings
 #define MAX_ENCODERS 8             //Restrict number of encoders
 #define STATES_PER_REV 2400        //Lines per rev * 2
 #define DEFAULT_RATE 10000         //[Hz]
@@ -45,9 +37,8 @@ var: variable name.
 val: the value you assign to that variable.
 */
 
-//*****************************************************
-//  Some macros
-//*****************************************************
+
+//Some macros
 #define SET(x,y) (x |=(1<<y))          //-Bit set/clear macros
 #define CLR(x,y) (x &= (~(1<<y)))      // |
 #define CHK(x,y) (x & (1<<y))          // |
@@ -84,11 +75,11 @@ Parameters
 x: variable. Allowed data types: char, int, long.
 y: variable or constant. Allowed data types: char, int, long.
 */
-//*****************************************************
+
+
 // Encoder state machine:
 // encoder offset = encref [old state][encoder input]
 // 128 -> state machine error (impossible state change)
-//*****************************************************
 volatile int encref[4][4] =
 {
   //  0  1  2  3
@@ -172,9 +163,8 @@ class IQencoder
     }
 };
 
-//*****************************************************
-//  Global encoder sampler timer interrupt
-//*****************************************************
+
+//Global encoder sampler timer interrupt
 SIGNAL(TIMER1_COMPA_vect)
 {
   OCR1A += timerIncrement;
@@ -190,5 +180,4 @@ SIGNAL(TIMER1_COMPA_vect)
     encoders[i]->state = input;
   }
 }
-
 #endif
