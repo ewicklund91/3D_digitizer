@@ -44,10 +44,10 @@ void setup()
   setEncoderRate(10000);
   
   //Attach encoders so anti-clockwise rotation is positive:
-  E0.attach(9, 8);      //E0 (Q,I)  
-  E1.attach(11, 10);    //E1 (I,Q)
-  E2.attach(13, 12);    //E2 (I,Q)
-  E3.attach(7, 6);      //tt (Q,I)
+  E0.attach(9, 8);      //E0 (Phase A, Phase B)  
+  E1.attach(11, 10);    //E1 (Phase B, Phase A)
+  E2.attach(13, 12);    //E2 (Phase B, Phase A)
+  E3.attach(7, 6);      //tt (Phase A, Phase B)
 
   delay(10);            //-Allow time to settle
 
