@@ -15,7 +15,7 @@ value: the value to assign to the macro.
 
 //Settings
 #define MAX_ENCODERS 8             //Restrict number of encoders
-#define STATES_PER_REV 2400        //Lines per rev * 2
+#define STATES_PER_REV 2400        //Lines per rev * 4; if your encoder is 600P/R this value would be 2400 etc.
 #define DEFAULT_RATE 10000         //[Hz]
 
 volatile unsigned int timerIncrement = (16000000L / DEFAULT_RATE);
